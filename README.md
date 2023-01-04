@@ -1,4 +1,7 @@
 # c64-rf-modulator-replacement
+
+RJP changes
+
 C64 Composite/S-Video RF Modulator Replacement
 
 <img src="./images/c64-rf-modulator-render-diagonal.PNG" width=400px>
@@ -12,7 +15,7 @@ C64 Composite/S-Video RF Modulator Replacement
 
 * [Photos](images/photos)
 
-# Introduction 
+# Introduction
 This is my version of a C64 RF Modulator replacement based on the schematics of similar designs like [Zero-X/OMS's Modified Commodore RF Modulator Design](images/zerox-oms-modulator_simple-schematic.png) and [JMP$FCE2's S-Video only design](images/jmp$fce2-schematic.png).  This board can be used to replace a damaged or defective RF modulator in your C64, to improve the sharpness of your video output, or as a modern solution to replace the composite/luma/chroma output functionality of the original modulator on new motherboards such as the SixtyClone or Bwack’s KU-14194.
 
 This design has a few goals that set it apart from the others:
@@ -71,7 +74,7 @@ With all jumpers in the down position, the board is configured for use on the 25
 For most configurations, the jumpers should be either all up or all down; however if you understand what you are doing and want to run a 5V 856x VIC-II from a short board in a 12V long board, there is one jumper that you may want to run in a non-standard configuration. First, you MUST isolate pin 13 on the VIC-II socket from the VIC-II (the short board outputs 12V there while an 856x is expecting 5V). Pin 13 on the VIC-II can then be connected to pin 40 (which is 5V Vcc). I recommend not modifying the VIC-II chips but instead using a piggyback socket or PCB. With a standard machined pin socket, simply trim off leg 13 and solder a jumper wire from leg 13 to 40. The 856x VIC-II can then just plug into the socket without any damaging modifications. Once the VIC-II is installed, the jumpers on the RF modulator should be in the following configuration to use the correct short board 1K pullup resistor:
 
 <img src="./images/jumpers-856x.png" width=200px> 	
-  
+
 
 ## Adjusting the Output Level
 If you choose to include adjustable potentiometers in your build, a counter-clockwise adjustment on the luma (Y) and chroma (C) potentiometers will reduce the output level. A clockwise adjustment will increase the output level. My recommendation is to start with both adjustments fully counter-clockwise and increase as necessary. The levels can be set with a scope or simply “by eye” depending on the tools you have available.
